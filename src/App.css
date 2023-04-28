@@ -1,5 +1,7 @@
 .App {
   text-align: center;
+  background-color:rgb(209, 202, 202);
+
 }
 
 .App-logo {
@@ -35,4 +37,14 @@
   to {
     transform: rotate(360deg);
   }
+}
+html {
+  scroll-behavior: smooth;
+}
+
+#Contact{
+  
+  scroll-margin-block-start: 110px;
+  
+  scroll-margin-block-end: 110pxx;
 }

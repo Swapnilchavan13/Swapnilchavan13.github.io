@@ -1,0 +1,71 @@
+:root {
+  --bg-color:hsl(49, 35%, 94%) ;
+  --typewriterSpeed: 2s;
+  --typewriterCharacters: 16;
+}
+
+.h1 {
+  position: relative;
+  position: relative;
+  width: max-content;
+  cursor: pointer;
+}
+
+.h1::before,
+.h1::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+
+.h1::before {
+  background: var(--bg-color);
+  animation: typewriter var(--typewriterSpeed)
+    steps(var(--typewriterCharacters)) 300ms forwards;
+}
+
+.h1::after {
+  width: 0.125em;
+  background: black;
+  animation: typewriter var(--typewriterSpeed)
+      steps(var(--typewriterCharacters)) 300ms forwards,
+    blink 1050ms steps(var(--typewriterCharacters)) infinite;
+}
+
+.subtitle {
+  color: "#C7AE92";
+  font-size: 2rem;
+  font-weight: 500;
+  opacity: 0;
+  transform: translateY(3rem);
+  animation: fadeInUp 1s ease calc(var(--typewriterSpeed) + 1s) forwards;
+}
+
+@keyframes typewriter {
+  to {
+    left: 100%;
+  }
+}
+
+@keyframes blink {
+  to {
+    background: transparent;
+  }
+}
+
+@keyframes fadeInUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+#Home{
+  
+  scroll-behavior: smooth;
+  
+}
+
